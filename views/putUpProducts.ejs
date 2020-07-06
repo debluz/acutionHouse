@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/putUpProducts.css">
+    <title>Displayed products</title>
+</head>
+<body>
+<div class="wrap">
+    <%- include('./partials/header') -%>
+
+    <main>
+        <%- include('./partials/userNav') -%>
+        <div class="labelFlex">
+            <label>Wystawione</label>
+        </div>
+        <% if(user.auctions.length > 0){ %>
+            <div class="listFlex">
+                <ul>
+                    <% auctions.forEach(function (auction) { %>
+                        <% user.auctions.forEach(function (auctionId) { %>
+                        <% if(auction._id == auctionId) {%>
+                        <% products.forEach(function (product) { %>
+                            <% if(auction.productId == product._id) { %>
+
+                        <li>
+                                    <div class="elementFlex">
+                                        <div class="imgFlex">
+                                            <img src="" alt="product">
+                                        </div>
+
+                                        <div>
+                                            <div class="nameLabel">
+                                                <label>Produkt</label>
+                                                <label class="idLabel"><%= auction.productId %></label>
+                                            </div>
+                                            <div class="priceLabel">
+                                                <label>Aktualna cena:</label>
+                                                <% if(auction.offers.length > 0){%>
+                                                    <label name="price_now" id="price_now"><%= auction.priceNow %></label>
+                                                <%} else {%>
+                                                    <label name="price_now" id="price_now"><%= auction.priceStart %></label>
+                                                <%};%>
+                                                <label class="currency">zł</label>
+                                            </div>
+                                            <div class="infoLabelFlex">
+                                                <div>
+                                                    <label>Marka:</label>
+                                                    <label class="info1"><%= product.brand %></label>
+                                                </div>
+                                                <div>
+                                                    <label>Rozmiar:</label>
+                                                    <label class="info2"><%= product.size%></label>
+                                                </div>
+                                                <div>
+                                                    <label>Rok produkcji:</label>
+                                                    <label class="info3"><%= product.yearOfProduction%></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="description">
+                                            <p><%= auction.description%>></p>
+                                            <div class="buttons">
+                                                <button onclick="location.href='/auctions/<%= auction._id %>/editAuction'" type="button">Edytuj</button>
+                                                <button onclick="location.href='/auctions/auctionDetailsUser/<%= auction._id%>'" type="button">Zobacz</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <% }%>
+                            <% }); %>
+                            <% }%>
+                    <% }); %>
+                        <% }); %>
+                </ul>
+            </div>
+        <% } else { %>
+            <p class="p_info">Nie ma obecnie wystawionych produktów.</p>
+        <% }%>
+
+
+    </main>
+
+    <%- include('./partials/footerUser') -%>
+</div>
+</body>
+<%- include('./partials/scriptNav') -%>

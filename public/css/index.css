@@ -1,0 +1,236 @@
+*{
+  margin: 0;
+  padding: 0;
+  /*
+  box-sizing: border-box;
+  */
+}
+
+html {
+  font-family: "Comic Sans MS", arial, sans-serif;
+  color: #222222;
+  font-size: 10px;
+}
+
+body {
+  background-color: white;
+}
+
+header {
+
+}
+
+.title{
+  order: 1;
+  flex-grow: 7;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Lucida Handwriting", arial, sans-serif;
+  font-size: 3vw;
+  color: #330000;
+}
+
+.container div {
+  width: 40px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  width: 40px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.change .bar2 {
+  width: 30px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.change .bar3 {
+  width: 20px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.container{
+  cursor:pointer;
+}
+
+.headerFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+.admin{
+  order: 3;
+  flex-grow: 0.5;
+  margin-top: 2vh;
+}
+
+.admin button{
+  padding: 5px;
+  width: 7vw;
+  font-family: "Comic Sans MS";
+  font-size: 150%;
+}
+
+.menuDiv {
+  display: flex;
+  order: 0;
+  justify-content: center;
+  padding: 20px;
+  flex-grow: 2;
+}
+
+
+
+
+
+
+/* MAIN */
+main {
+  margin: 50px;
+
+}
+
+main div.mainFlex {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15vw;
+  width: 82%;
+  height: 35vh;
+}
+
+main p.opis {
+  background-color: burlywood;
+  border: 1px;
+  text-align: left;
+  flex-grow: 7;
+  font-size: 2rem;
+  font-family: "Comic Sans MS";
+  padding: 1vw;
+}
+
+.mainFlex div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+
+.mainFlex button {
+  width: auto;
+  padding: 8px;
+  margin: 8px;
+  font-size: 1.2vw;
+  flex-basis: 20%;
+}
+
+/* IMG Section */
+
+.infoFlex {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15vw;
+  width: 82%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.infoFlex img {
+  background-color: green;
+  height: 20vh;
+  margin-top: 5vh;
+  flex-basis: 18%;
+}
+
+.img1 {
+  margin-right: 5vw;
+}
+
+.img2 {
+  margin-right: 8vw;
+  margin-left: 8vw;
+}
+
+.img3 {
+  margin-left: 5vw;
+}
+
+.infoFlex p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 18%;
+  margin-top: 2vh;
+  font-family: "Comic Sans MS";
+  font-size: medium;
+}
+
+.info1 {
+  margin-right: 5vw;
+}
+
+.info2 {
+  margin-right: 8vw;
+  margin-left: 8vw;
+}
+.info3 {
+  margin-left: 5vw;
+}
+
+/* MENU - SIDEBAR */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 70px;
+}
+
+.sidenav a {
+  margin: 8px;
+  padding: 0.25vw 1vw;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-family: "Lucida Handwriting", arial, sans-serif;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  margin-left: 1vw;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+

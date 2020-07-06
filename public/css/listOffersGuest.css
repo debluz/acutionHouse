@@ -1,0 +1,224 @@
+.title{
+  order: 1;
+  margin-left: 31vw;
+  flex-grow: 20;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Lucida Handwriting", arial, sans-serif;
+  font-size: 3vw;
+  color: #330000;
+}
+
+.container div {
+  width: 40px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+
+.change .bar1 {
+  width: 40px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.change .bar2 {
+  width: 30px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.change .bar3 {
+  width: 20px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.container{
+  cursor:pointer;
+}
+
+.headerFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+.menuDiv {
+  display: flex;
+  order: 0;
+  justify-content: center;
+  padding: 20px;
+  flex-grow: 1;
+  margin-left: 0.55vw;
+}
+
+.login {
+  order: 2;
+  margin-top: 1vh;
+  margin-right: 2vw;
+  height: 3.1vh;
+  width: 7.03vw;
+  font-family: "Comic Sans MS";
+  font-size: 0.8vw;
+}
+
+.logout {
+  order: 2;
+  margin-top: 1vh;
+  margin-right: 2vw;
+  height: 3.1vh;
+  width: 7.03vw;
+  font-family: "Comic Sans MS";
+  font-size: 0.8vw;
+}
+
+.registration {
+  order: 3;
+  margin-top: 1vh;
+  margin-right: 2vw;
+  height: 3.1vh;
+  width: 7.03vw;
+  font-family: "Comic Sans MS";
+  font-size: 0.8vw;
+}
+
+/* MENU - SIDEBAR */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 70px;
+}
+
+.sidenav a {
+  margin: 8px;
+  padding: 0.25vw 1vw;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-family: "Lucida Handwriting", arial, sans-serif;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  margin-left: 1vw;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* MAIN */
+
+.offerFlex{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20vw;
+  height: 75vh;
+}
+
+.offers-table{
+  border: #222222 solid 1px;
+  display: block;
+  table-layout: fixed;
+  border-collapse: collapse;
+  overflow: auto;
+  height: 60vh;
+  width: 90%;
+  margin-bottom: 2vh;
+
+}
+
+.actions {
+  text-align: center;
+  width: 30rem;
+}
+
+thead {
+  background-color: #555555;
+  color: #cccccc;
+
+}
+thead th{
+  width: 50%;
+}
+
+
+
+
+
+th, td{
+  border: #222222 solid 0.1vw;
+  padding: 5px;
+  text-align: center;
+}
+
+.button-cofnij{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-cofnij button{
+  margin-right: 10%;
+  height: 3vh;
+  width:8vw;
+}
+
+
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  height: 4vh;
+  border-top: 0.2vh solid #111111;
+
+}
+
+footer a {
+  font-family: "Comic Sans MS";
+  margin-top: 1vh;
+  text-decoration: none;
+  color: #222222;
+}
+
+.a1, .a2 {
+  margin-right: 3vw;
+}
+
+.a3 {
+  margin-right: 7vw;
+}
+
+.wrap {
+  min-height: 100%;
+}

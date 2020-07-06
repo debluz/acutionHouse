@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Auction house</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<div class="wrap">
+    <header>
+        <div class="headerFlex">
+
+            <h1 class="title">Auction House</h1>
+            <div class="menuDiv">
+                <div class="container" onclick="openNav()" onmouseover="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <div class="admin">
+                <button onclick="location.href='/users/loginAdmin.html'">Admin</button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <%- include('./partials/guestNav') -%>
+
+        <div class="mainFlex">
+
+            <p class="opis">
+                Od 1999 roku ułatwiamy Polakom zakupy w sieci oferując im najlepsze ceny, wygodę i pełne bezpieczeństwo transakcji.
+                Istniejemy od 1999 roku, kiedy holenderski przedsiębiorca Arjan Bakker założył serwis aukcyjny Allegro. Przyjmuje się, że wtedy rozpoczął się polski e-commerce. Od początku przyświeca nam ten sam cel – radość kupowania i sprzedawania online. Pozwalamy zaoszczędzić czas, dajemy wygodę, największy wybór produktów w polskiej sieci. Zmieniamy życie ludzi na lepsze. To daje nam olbrzymią satysfakcję.
+            </p>
+            <div>
+                <button onclick="location.href='/users/login'" type="button" class="login">Logowanie</button>
+                <button onclick="location.href='/users/registration'" type="button" class="registration">Rejestracja</button>
+            </div>
+
+        </div>
+
+        <section class="infoFlex">
+            <img class="img1" src="img/bezpiecznie.jpg" alt="info1">
+            <img class="img2" src="img/delivery.jpg" alt="info2">
+            <img class="img3" src="img/gwarancja-usług.jpg" alt="info3">
+            <p class="info1">Biezpiecznie</p>
+            <p class="info2">Szybka realizacja</p>
+            <p class="info3">Gwarancja usług</p>
+        </section>
+    </main>
+
+
+</div>
+</body>
+
+<%- include('./partials/scriptNav') -%>
+</html>

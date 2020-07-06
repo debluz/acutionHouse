@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/afterRegistration.css">
+    <title>Succesful Registration</title>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div class="headerFlex">
+            <h1 class="title">Auction House</h1>
+            <div class="menuDiv">
+                <div class="container" onclick="openNav()" onmouseover="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <nav id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href='/'>Home page</a>
+            <a href="/auctions/listOfAuctionsGuest">Licytacje</a>
+            <a href="aboutUsGuest">O nas</a>
+            <a href="contactGuest">Kontakt</a>
+        </nav>
+
+        <section>
+            <label class="message">Rejestracja przebiegła pomyślnie! Teraz możesz się zalogować do swojego nowego konta!</label>
+            <form action="" class="formFlex">
+                <div>
+                    <button onclick="location.href='/users/login'" type="button">Logowanie</button>
+                </div>
+            </form>
+        </section>
+
+
+        <section class="imgFlex">
+            <img class="img1" src="/img/bezpiecznie.jpg" alt="info1">
+            <img class="img2" src="/img/delivery.jpg" alt="info2">
+            <img class="img3" src="/img/gwarancja-usług.jpg" alt="info3">
+            <p class="info1">Biezpiecznie</p>
+            <p class="info2">Szybka realizacja</p>
+            <p class="info3">Gwarancja usług</p>
+        </section>
+    </main>
+</div>
+</body>
+
+<%- include('./partials/scriptNav') -%>
+</html>

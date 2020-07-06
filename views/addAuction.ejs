@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/addAuction.css">
+    <title>Adding product</title>
+</head>
+<body>
+<div class="wrap">
+    <%- include('./partials/header') -%>
+
+    <main>
+        <%- include('./partials/userNav') -%>
+
+        <div class="label">
+            <label>Nowa aukcja</label>
+        </div>
+        <div class="errors-list">
+            <ul>
+                <% errorsList.forEach(function (error){%>
+                    <li><%= error%></li>
+                <% }); %>
+            </ul>
+        </div>
+        <form action="/products/<%= product._id%>/addAuction" id="formAddingAuction" method="post" novalidate>
+            <div class="formFlex">
+                <label for="priceNow">Cena początkowa
+                    <input type="number" name="priceNow" id="priceNow" ><span class="required"></span>
+                </label>
+                <span id="errors_priceNow" class="errors-text"></span>
+
+                <label for="dateEnd">Data zakończenia
+                    <input type="date" name="dateEnd" id="dateEnd"><span class="required"></span>
+                </label>
+                <span id="errors_dateEnd" class="errors-text"></span>
+
+
+            </div>
+            <div class="validationFlex">
+                <div class="opisFlex">
+                    <label for="description">Opis
+                        <textarea name="description" id="description"></textarea><span class="required"></span>
+                    </label>
+                    <span id="errors_description" class="errors-text"></span>
+                </div>
+            </div>
+            <p id="errors_info" class="errors_text"></p>
+
+            <div class="dodajFlex">
+                <button onclick="location.href='/products/myProducts'" type="button">Anuluj</button>
+                <button type="submit">Dodaj</button>
+            </div>
+        </form>
+
+    </main>
+
+    <%- include('./partials/footerUser') -%>
+</div>
+<script src="/js/validationAuction.js"></script>
+</body>
+<%- include('./partials/scriptNav') -%>

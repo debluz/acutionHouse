@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/product.css">
+    <title>Editing product</title>
+</head>
+<body>
+<div class="wrap">
+    <%- include('./partials/header') -%>
+
+    <main>
+        <%- include('./partials/userNav') -%>
+
+        <div class="labelFlex">
+            <label>Edycja</label>
+        </div>
+        <form action="/products/<%= product._id%>/editProduct/?_method=PUT" method="post" id="formAddingProduct" novalidate>
+            <div class="formFlex">
+                <label for="product_name">Nazwa
+                    <input type="text" name="product_name" id="product_name" value="<%= product.name %>"><span class="required"></span>
+                </label>
+                <span id="errors_product_name" class="errors-text"></span>
+
+                <label for="brand">Marka
+                    <input type="text" name="brand" id="brand" value="<%= product.brand %>"><span class="required"></span>
+                </label>
+                <span id="errors_brand" class="errors-text"></span>
+
+                <label for="size">Rozmiar
+                    <input type="number" name="size" id="size" step="0.5" value="<%= product.size %>"><span class="required"></span>
+                </label>
+                <span id="errors_size" class="errors-text"></span>
+
+                <label for="year">Rok produkcji
+                    <input type="number" name="year" id="year" value="<%= product.yearOfProduction %>"><span class="required"></span>
+                </label>
+                <span id="errors_year" class="errors-text"></span>
+
+            </div>
+            <div class="validationFlex">
+                <div class="opisFlex">
+                    <label for="description">Opis
+                        <textarea name="description" id="description"><%= product.description%></textarea><span class="required"></span>
+                    </label>
+                    <span id="errors_description" class="errors-text"></span>
+                </div>
+            </div>
+            <p id="errors_info" class="errors_text"></p>
+            <div class="dodajFlex">
+                <button onclick="location.href='/products/myProducts'" type="button">Anuluj</button>
+                <button type="submit">Zatwierdź</button>
+            </div>
+        </form>
+    </main>
+
+    <%- include('./partials/footerUser') -%>
+</div>
+<script src="/js/validationProduct.js"></script>
+</body>
+<%- include('./partials/scriptNav') -%>

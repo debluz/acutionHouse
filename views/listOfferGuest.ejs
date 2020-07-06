@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/listOffersGuest.css">
+    <title>List of Offers</title>
+</head>
+<body>
+<div class="wrap">
+    <%- include('./partials/headerGuest') -%>
+
+    <main>
+        <%- include('./partials/guestNav') -%>
+
+        <div class="offerFlex">
+            <label>Licytacja id: <%= auction._id%></label>
+            <h1>Lista ofert:</h1>
+            <div>
+                <table class="offers-table">
+                    <thead>
+                    <tr>
+                        <th>Id użytkownika</th>
+                        <th>Data</th>
+                        <th>Kwota</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% if(offers != undefined && offers.length > 0){%>
+                        <%offers.forEach(function (offer) {%>
+                        <tr>
+                            <td><%= offer.userId %></td>
+                            <td><%= offer.date %>></td>
+                            <td><%= offer.price %></td>
+                        </tr>
+                        <%});%>
+                    <%} else {};%>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="button-cofnij">
+                <button onclick="location.href='/auctions/auctionDetailsGuest/<%= auction._id%>'">Cofnij</button>
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </main>
+
+    <%- include('./partials/footerGuest') -%>
+<%- include('./partials/scriptNav') -%>

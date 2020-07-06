@@ -1,0 +1,285 @@
+.title{
+  order: 1;
+  margin-left: 12vw;
+  flex-grow: 20;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Lucida Handwriting", arial, sans-serif;
+  font-size: 3vw;
+  color: #330000;
+}
+
+.container div {
+  width: 40px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+
+.change .bar1 {
+  width: 40px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.change .bar2 {
+  width: 30px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.change .bar3 {
+  width: 20px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.container{
+  cursor:pointer;
+}
+
+.headerFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+.menuDiv {
+  display: flex;
+  order: 0;
+  justify-content: center;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.logout {
+  order: 2;
+  margin-top: 1vh;
+  margin-right: 2vw;
+  height: 3.1vh;
+  width: 7.03vw;
+  font-family: "Comic Sans MS";
+  font-size: 0.8vw;
+}
+
+.registration {
+  order: 3;
+  margin-top: 1vh;
+  margin-right: 2vw;
+  height: 3.1vh;
+  width: 7.03vw;
+  font-family: "Comic Sans MS";
+  font-size: 0.8vw;
+}
+
+/* MENU - SIDEBAR */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 70px;
+}
+
+.sidenav a {
+  margin: 8px;
+  padding: 0.25vw 1vw;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-family: "Lucida Handwriting", arial, sans-serif;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  margin-left: 1vw;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* MAIN */
+
+.labelFlex {
+  display: flex;
+  margin-left: 24vw;
+  margin-bottom: 2vh;
+  font: italic bold 2vw Serif;
+}
+
+.listFlex {
+  display: flex;
+  margin-left: 25vw;
+  width: 65vw;
+  max-height: 65vh;
+  overflow-y: scroll;
+}
+
+.listFlex ul{
+  list-style-type: circle;
+}
+
+.listFlex li {
+  margin-bottom: 3vh;
+}
+
+
+.elementFlex{
+  flex-direction: row;
+  border: #222222 solid 0.1vw;
+  display: flex;
+  width: 60vw;
+  font-size: 0.6vw;
+  font-family: "Comic Sans MS";
+}
+
+.imgFlex {
+  margin: 1vw;
+  background-color: green;
+  width: 5vw;
+  height: 10;
+}
+
+.nameLabel{
+  width: 10vw;
+  margin: 0.5vw;
+  display: flex;
+}
+.nameLabel label{
+  margin-right: 1vw;
+}
+
+.priceLabel{
+  border: #222222 solid 0.07vw;
+  padding: 0.5vw;
+  width: 10vw;
+  margin: 2vh 0 2vh 0;
+}
+
+.priceLabel label{
+  margin-right: 0.2vw;
+}
+
+.infoLabelFlex {
+  display: flex;
+  margin-bottom: 1vh;
+}
+
+.info1, .info2, .info3{
+  margin-left: 0.2vw;
+}
+
+.info1, .info2 {
+  margin-right: 2vw;
+}
+
+.description {
+  margin: 0 1vw 1vw 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  align-items: flex-end;
+}
+
+.description p {
+  border: #222222 solid 0.05vw;
+  width: 110%;
+  height: 65%;
+  font-size: 0.7vw;
+}
+
+/*.description button{
+  width: 20%;
+  margin-top: 1vh;
+  font-size: 0.8vw;
+}*/
+
+.buttons button {
+  font-family: "Comic Sans MS";
+  width: 8vw;
+  font-size: 1vh;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 2vw;
+}
+
+.buttonsFlex {
+  right: 10vw;
+  left: 0;
+  bottom: 8vh;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonsFlex button {
+  margin-left: 3vw;
+  font-size: 100%;
+  padding: 0.5vh 2vw;
+}
+
+.p_info{
+  width: 100%;
+  text-align: center;
+  font-size: large;
+}
+
+
+
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  height: 4vh;
+  border-top: 0.2vh solid #111111;
+
+}
+
+footer a {
+  font-family: "Comic Sans MS";
+  margin-top: 1vh;
+  text-decoration: none;
+  color: #222222;
+}
+
+.a1, .a2 {
+  margin-right: 3vw;
+}
+
+.a3 {
+  margin-right: 7vw;
+}
+
+.wrap {
+  min-height: 100%;
+}

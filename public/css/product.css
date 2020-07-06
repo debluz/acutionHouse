@@ -1,0 +1,277 @@
+.title{
+  order: 1;
+  margin-left: 12vw;
+  flex-grow: 20;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Lucida Handwriting", arial, sans-serif;
+  font-size: 3vw;
+  color: #330000;
+}
+
+.container div {
+  width: 40px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+
+.change .bar1 {
+  width: 40px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.change .bar2 {
+  width: 30px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.change .bar3 {
+  width: 20px;
+  height: 8px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.2s;
+}
+
+.container{
+  cursor:pointer;
+}
+
+.headerFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+.menuDiv {
+  display: flex;
+  order: 0;
+  justify-content: center;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.logout {
+  order: 2;
+  margin-top: 1vh;
+  margin-right: 2vw;
+  height: 3.1vh;
+  width: 7.03vw;
+  font-family: "Comic Sans MS";
+  font-size: 0.8vw;
+}
+
+.registration {
+  order: 3;
+  margin-top: 1vh;
+  margin-right: 2vw;
+  height: 3.1vh;
+  width: 7.03vw;
+  font-family: "Comic Sans MS";
+  font-size: 0.8vw;
+}
+
+/* MENU - SIDEBAR */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 70px;
+}
+
+.sidenav a {
+  margin: 8px;
+  padding: 0.25vw 1vw;
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-family: "Lucida Handwriting", arial, sans-serif;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  margin-left: 1vw;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* MAIN */
+
+.labelFlex {
+  display: flex;
+  margin-left: 24vw;
+  margin-bottom: 2vh;
+  font: italic bold 2vw Serif;
+}
+
+.label {
+  display: flex;
+  margin-left: 24vw;
+  margin-bottom: 5vh;
+  font: italic bold 2vw Serif;
+}
+
+.formFlex {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20vw;
+  font-size: 1.5vw;
+  align-items: flex-end;
+  width: 22vw;
+  padding-right: 5vw;
+}
+
+.formFlex label{
+  margin-bottom: 1vh;
+}
+
+.formFlex label input {
+  margin-left: 1.5vw;
+  width: 10vw;
+  height: 3vh;
+}
+
+.opisFlex {
+  display: flex;
+  margin-left: 26vw;
+  font-size: 1.5vw;
+  width: 50vw;
+  justify-content: flex-start;
+}
+
+
+
+.opisFlex textarea{
+  margin-top: 1vh;
+  margin-left: 1.5vw;
+  width: 27.8vw;
+  height: 20vh;
+  vertical-align: top;
+  resize: none;
+}
+
+.idFlex {
+  display: flex;
+  flex-direction: row;
+  margin-left: 24vw;
+  font-size: 1.5vw;
+  margin-bottom: 2vh;
+}
+
+.idFlex label{
+  margin-right: 1vw;
+}
+
+.buttonFlex {
+  display: flex;
+  justify-content: flex-end;
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 2vw;
+  margin-top: 12vh;
+}
+
+.dodajFlex {
+  display: flex;
+  justify-content: flex-end;
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 2vw;
+  margin-top: 5vh;
+}
+
+.dodajFlex button, .buttonFlex button{
+  font-size: 1vw;
+  padding: 0.5vw;
+  margin-left: 5vw;
+}
+
+
+
+/* VALIDATION */
+
+.errors-input {
+  border: 3px solid #e74c3c;
+}
+.errors-text {
+  font-size: 0.4em;
+}
+.errors-text, .required {
+  color: #e74c3c;
+}
+
+.required:after { content:" *"; }
+
+.validationFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+.opisFlex .errors-text {
+  margin-left: 0.5em;
+}
+
+p#errors_info {
+  color: red;
+  margin-left: 31vw;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  height: 4vh;
+  border-top: 0.2vh solid #111111;
+
+}
+
+footer a {
+  font-family: "Comic Sans MS";
+  margin-top: 1vh;
+  text-decoration: none;
+  color: #222222;
+}
+
+.a1, .a2 {
+  margin-right: 3vw;
+}
+
+.a3 {
+  margin-right: 7vw;
+}
+
+.wrap {
+  min-height: 100%;
+}
+

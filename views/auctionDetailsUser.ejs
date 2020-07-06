@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/biddingGuest.css">
+    <title>Bidding</title>
+</head>
+<body>
+<div class="wrap">
+    <%- include('./partials/header') -%>
+
+    <main>
+        <%- include('./partials/userNav') -%>
+
+        <div class="mainFlex">
+            <div class="firstFlex">
+                <div class="section1">
+                    <div class="labelFlex">
+                        <label>Licytacja id:</label>
+                        <label><%= auction._id %></label>
+                    </div>
+                    <img class="bigImg" src="" alt="bidding">
+                    <div class="imgFlex">
+                        <img class="img1" src="" alt="add1">
+                        <img class="img2" src="" alt="add2">
+                        <img class="img3" src="" alt="add3">
+                    </div>
+                </div>
+                <div class="section2">
+                    <div class="description">
+                        <label>Produkt</label>
+                        <label><%= product.name %></label>
+                    </div>
+                    <div class="description">
+                        <label>Marka:</label>
+                        <label><%= product.brand %></label>
+                    </div>
+                    <div class="description">
+                        <label>Rozmiar:</label>
+                        <label><%= product.size %></label>
+                    </div>
+                    <div class="description">
+                        <label>Rok produkcji:</label>
+                        <label><%= product.yearOfProduction %></label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="secondFlex">
+                <div class="labelFlex">
+                    <label>Data rozpoczęcia licytacji:</label>
+                    <label><%= auction.dateStart %></label>
+                </div>
+                <div class="section3">
+                    <div class="bidding">
+                        <div class="errors-list">
+                            <ul>
+                                <% errorsList.forEach(function (error){%>
+                                    <li style="color: #e74c3c"><%= error%></li>
+                                <% }); %>
+                            </ul>
+                        </div>
+                        <div class="labelFlex">
+                            <label>Aktualna cena:</label>
+                            <% if(auction.offers.length > 0){%>
+                                <label name="price_now" id="price_now"><%= auction.priceNow %></label>
+                            <%} else {%>
+                                <label name="price_now" id="price_now"><%= auction.priceStart %></label>
+                                <%};%>
+                            <label>zł</label>
+                        </div>
+
+                        <form class="formFlex" action="/auctions/auctionDetailsUser/<%= auction._id%>" method="post" id="formBidding">
+                            <input type="number" name="offer" id="offer" required>
+                            <button type="submit">Licytuj</button>
+                        </form>
+
+                        <div class="labelFlex">
+                            <label>Koniec licytacji:</label>
+                            <label><%= auction.dateEnd %></label>
+                        </div>
+                    </div>
+                    <div class="listOffers">
+                        <button onclick="location.href='/offers/<%= auction._id%>/listOfferUser'">Lista ofert</button>
+                    </div>
+                    <div class="descProduct">
+                        <p><%= auction.description %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </main>
+    <%- include('./partials/footerUser') -%>
+</div>
+</body>
+<%- include('./partials/scriptNav') -%>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/myProducts.css">
+    <title>My Products</title>
+</head>
+<body>
+<div class="wrap">
+    <%- include('./partials/header') -%>
+
+    <main>
+        <%- include('./partials/userNav') -%>
+        <div class="labelFlex">
+            <label>Moje produkty</label>
+        </div>
+        <% if(products != 'undefined' && products.length > 0){ %>
+        <div class="listFlex">
+            <ul>
+                <% products.forEach(function (product) { %>
+                <li>
+                    <div class="elementFlex">
+                        <div class="imgFlex">
+                            <img src="" alt="product">
+                        </div>
+                        <div>
+                            <div class="idLabel">
+                                <label>Produkt</label>
+                                <label><%= product._id%></label>
+                            </div>
+                            <div class="nameLabel">
+                                <label><%= product.name%></label>
+                            </div>
+                            <div class="infoLabelFlex">
+                                <div>
+                                    <label>Marka:</label>
+                                    <label class="info1"><%= product.brand %></label>
+                                </div>
+                                <div>
+                                    <label>Rozmiar:</label>
+                                    <label class="info2"><%= product.size %></label>
+                                </div>
+                                <div>
+                                    <label>Rok produkcji:</label>
+                                    <label class="info3"><%= product.yearOfProduction %></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p><%= product.description %></p>
+                            <div class="buttons">
+                                <button onclick="location.href='/products/<%= product._id %>/editProduct'" type="button">Edytuj</button>
+                                <%- include('./partials/deleteForm', { url: `/products/myProducts/${product._id}` }) %>
+                                <% if(!product.auctionId){ %>
+                                    <button onclick="location.href='/products/<%= product._id%>/addAuction'" type="button">Wystaw</button>
+                                <%}%>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <%});%>
+            </ul>
+        </div>
+        <% } else { %>
+            <p class="p_info">Nie masz obecnie żadnych produktów.</p>
+        <% }%>
+        <div class="buttonsFlex">
+            <button onclick="location.href='/products/addProduct'" type="button" class="button4">Dodaj nowy produkt</button>
+        </div>
+    </main>
+
+    <%- include('./partials/footerUser') -%>
+</div>
+</body>
+<%- include('./partials/scriptNav') -%>

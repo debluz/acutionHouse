@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/failedLogin.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="wrap">
+    <%- include('./partials/headerGuest') -%>
+    <main>
+        <%- include('./partials/guestNav') -%>
+
+        <section class="messageFlex">
+            <label>Logowanie się nie powiodło! Login lub hasło jest nieprawidłowe!</label>
+            <button onclick="location.href='/users/login'" type="button">Spróbuj ponownie</button>
+        </section>
+
+        <section class="imgFlex">
+            <img class="img1" src="/img/bezpiecznie.jpg" alt="info1">
+            <img class="img2" src="/img/delivery.jpg" alt="info2">
+            <img class="img3" src="/img/gwarancja-usług.jpg" alt="info3">
+            <p class="info1">Biezpiecznie</p>
+            <p class="info2">Szybka realizacja</p>
+            <p class="info3">Gwarancja usług</p>
+        </section>
+    </main>
+</div>
+
+</body>
+<%- include('./partials/scriptNav') -%>
+</html>

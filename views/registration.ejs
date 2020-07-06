@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/registration.css">
+    <title>Rejestracja</title>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <div class="headerFlex">
+            <h1 class="title">Auction House</h1>
+            <div class="menuDiv">
+                <div class="container" onclick="openNav()" onmouseover="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainFlex">
+        <aside>
+            <nav id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href='/'>Home page</a>
+                <a href="/auctions/listOfAuctionsGuest">Licytacje</a>
+                <a href="aboutUsGuest">O nas</a>
+                <a href="contactGuest">Kontakt</a>
+            </nav>
+        </aside>
+
+
+        <div class="registrationFlex">
+            <div class="errors-list">
+                <ul>
+                    <% errorsList.forEach(function (error){%>
+                        <li style="color: #e74c3c"><%= error%></li>
+                    <% }); %>
+                </ul>
+            </div>
+
+            <h1>Rejestracja</h1>
+            <form action="/users/registration" method="post" class="formFlex" id="formRegistration" novalidate>
+                <label for="login">Login:
+                    <input type="text" name="login" id="login"><span class="required"></span>
+                </label>
+                <span id="errors_login" class="errors-text"></span>
+
+                <label for="password">Hasło:
+                    <input type="password" name="password" id="password"><span class="required"></span>
+                </label>
+                <span id="errors_password" class="errors-text"></span>
+
+                <label for="first_name">Imię:
+                    <input type="text" name="first_name" id="first_name"><span class="required"></span>
+                </label>
+                <span id="errors_first_name" class="errors-text"></span>
+
+                <label for="second_name">Nazwisko:
+                    <input type="text" name="second_name" id="second_name"><span class="required"></span>
+                </label>
+                <span id="errors_second_name" class="errors-text"></span>
+
+                <label for="birthday">Data urodzenia:
+                    <input type="date" name="birthday" id="birthday"><span class="required"></span>
+                </label>
+                <span id="errors_birthday" class="errors-text"></span>
+
+                <label for="address">Ulica:
+                    <input type="text" name="address" id="address"><span class="required"></span>
+                </label>
+                <span id="errors_address" class="errors-text"></span>
+
+                <label for="postal_code">Kod pocztowy:
+                    <input type="text" name="postal_code" id="postal_code"><span class="required"></span>
+                </label>
+                <span id="errors_postal_code" class="errors-text"></span>
+
+                <input type="submit" class="registerButton" value="Zarejestruj się">
+                <p id="errors_info" class="errors_text"></p>
+            </form>
+
+        </div>
+
+        <section class="imgFlex">
+            <div class="img1Flex">
+                <img class="img1" src="/img/bezpiecznie.jpg" alt="info1">
+                <p class="info1">Biezpiecznie</p>
+            </div>
+            <div class="img2Flex">
+                <img class="img2" src="/img/delivery.jpg" alt="info2">
+                <p class="info2">Szybka realizacja</p>
+            </div>
+        </section>
+    </main>
+
+</div>
+<script src="/js/validationRegistration.js"></script>
+</body>
+
+<%- include('./partials/scriptNav') -%>
+</html>
+
